@@ -1,3 +1,6 @@
-- session start
-- getAll 
-- getAttribute
+- initialiser la session ("/sessionStart")
+- ajouter:  ("/addSession")
+- afficher: ("/afficher")
+- mettre a jour: ("/updateSession)
+- remove Attribute: ("/removeSession") 
+- invalidate: ("/invalidate")
