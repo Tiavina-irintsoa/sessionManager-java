@@ -16,7 +16,9 @@ public class AddSessionServlet extends HttpServlet {
     throws ServletException, IOException {
     PrintWriter out = resp.getWriter();
     try {
-      SessionManager manager = new SessionManager(req, resp);
+      out.print("tiita");
+
+      SessionManager manager = new SessionManager(req, resp,this);
       manager.setAttribute("profile", "admin");
       System.out.println("adding personne");
       Personne personne = new Personne(

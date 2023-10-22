@@ -24,7 +24,7 @@ public class Connect {
           "postgres",
           "root"
         );
-        connect.setAutoCommit(false);
+        connect.setAutoCommit(true);
     } catch (Exception e) {
       throw e;
     }

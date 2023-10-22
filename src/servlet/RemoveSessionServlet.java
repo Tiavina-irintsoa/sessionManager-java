@@ -14,7 +14,9 @@ public class RemoveSessionServlet extends HttpServlet {
     throws ServletException, IOException {
     PrintWriter out = resp.getWriter();
     try {
-      SessionManager manager = new SessionManager(req, resp);
+      out.print("tiita");
+
+      SessionManager manager = new SessionManager(req, resp,this);
       manager.removeAttribute("profile");
       out.print("deleted");
     } catch (Exception e) {

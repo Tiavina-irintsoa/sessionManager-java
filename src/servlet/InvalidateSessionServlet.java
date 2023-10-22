@@ -14,7 +14,9 @@ public class InvalidateSessionServlet extends HttpServlet {
     throws ServletException, IOException {
     PrintWriter out = resp.getWriter();
     try {
-      SessionManager manager = new SessionManager(req, resp);
+            out.print("tiita");
+
+      SessionManager manager = new SessionManager(req, resp,this);
       manager.invalidate();
       out.print("invalidate");
     } catch (Exception e) {

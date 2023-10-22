@@ -18,7 +18,9 @@ public class GetSessionServlet extends HttpServlet {
     throws ServletException, IOException {
     PrintWriter out = resp.getWriter();
     try {
-      SessionManager manager = new SessionManager(req, resp);
+      out.print("tiita");
+
+      SessionManager manager = new SessionManager(req, resp,this);
       manager.setAttribute("something", "somevalue");
       HashMap<String, Object> sessionData = manager.getAll();
       out.println("Afficher tous les objets dans la session");

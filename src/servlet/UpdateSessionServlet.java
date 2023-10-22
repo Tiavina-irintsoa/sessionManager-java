@@ -14,7 +14,9 @@ public class UpdateSessionServlet extends HttpServlet {
     throws ServletException, IOException {
     PrintWriter out = resp.getWriter();
     try {
-      SessionManager manager = new SessionManager(req, resp);
+      out.print("tiita");
+
+      SessionManager manager = new SessionManager(req, resp,this);
       manager.setAttribute("profile", "user");
       out.print("updated");
     } catch (Exception e) {

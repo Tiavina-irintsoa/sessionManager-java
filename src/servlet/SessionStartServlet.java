@@ -14,10 +14,12 @@ public class SessionStartServlet extends HttpServlet {
     throws ServletException, IOException {
     PrintWriter out = resp.getWriter();
     try {
-      SessionManager manager = new SessionManager(req, resp);
+      out.print("tiita");
+      SessionManager manager = new SessionManager(req, resp,this);
       out.print("Init session succeed, please check the sessionid (key=RRTSESSIONID) in the cookies");
     } catch (Exception e) {
       out.print(e.toString());
+      e.printStackTrace();
     }
   }
 }
